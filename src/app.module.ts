@@ -4,7 +4,6 @@ import { typeOrmConfig } from './config/typeorm.config';
 import { CarModule } from './features/car/car.module';
 import { UserModule } from './features/user/user.module';
 import ENTITIES from './shared/models/entities/entities';
-import { BaseService } from './shared/services/base.service';
 
 @Module({
   imports: [
@@ -14,7 +13,7 @@ import { BaseService } from './shared/services/base.service';
       ...ENTITIES
     ]
   }),CarModule, UserModule],
-  providers: [BaseService],
-  exports:[BaseService]
+  providers: [],
+  exports:[]
 })
 export class AppModule {}
