@@ -1,18 +1,15 @@
 import { Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
-import { typeOrmConfig } from './config/typeorm.config';
+import { MongooseModule } from '@nestjs/mongoose';
 import { CarModule } from './features/car/car.module';
 import { UserModule } from './features/user/user.module';
-import ENTITIES from './shared/models/entities/entities';
+import { databaseConfig } from './config/database.config';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-    ...typeOrmConfig,
-    entities: [
-      ...ENTITIES
-    ]
-  }),CarModule, UserModule],
+    MongooseModule.forRoot(databaseConfig.url),
+    CarModule, 
+    UserModule
+  ],
   providers: [],
   exports:[]
 })

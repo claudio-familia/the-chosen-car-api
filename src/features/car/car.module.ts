@@ -1,15 +1,21 @@
 import { Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
+import { MongooseModule } from '@nestjs/mongoose';
+import { REPOSITORIES } from 'src/shared/models/repositories/repositories';
+import { SCHEMAS } from 'src/shared/models/schemas/schemas';
+import { SERVICES } from 'src/shared/services/services';
 import { BrandController } from './controllers/brand.controller';
 import { CarTypeController } from './controllers/cartype.controller';
-import { CarTypeDto } from './models/dtos/car-type.dto';
-import { CarTypeRepostory } from './repositories/car-type.repository';
-import { CartypeService } from './services/car-type.service';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([CarTypeRepostory])],
+  imports: [
+    MongooseModule.forFeature([
+      ...SCHEMAS
+    ]),
+  ],
   controllers: [BrandController, CarTypeController],
-  providers: [CartypeService],
-  exports: [CartypeService]
+  providers: [
+    ...REPOSITORIES,
+    ...SERVICES
+  ]
 })
 export class CarModule {}
