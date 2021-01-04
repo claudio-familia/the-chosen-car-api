@@ -23,8 +23,8 @@ export class StateRepostory {
     }
     
     public async add(entity: StateDto): Promise<State> {
-        const newEntity = await new this.stateModel(entity);
-        return newEntity.save();
+        const newEntity = new this.stateModel(entity);
+        return await newEntity.save();
     }
 
     public async update(id: string, entity: StateDto): Promise<State> {

@@ -23,8 +23,8 @@ export class CarTypeRepostory {
     }
     
     public async add(entity: CarTypeDto): Promise<CarType> {
-        const newEntity = await new this.carTypeModel(entity);
-        return newEntity.save();
+        const newEntity = new this.carTypeModel(entity);
+        return await newEntity.save();
     }
 
     public async update(id: string, entity: CarTypeDto): Promise<CarType> {

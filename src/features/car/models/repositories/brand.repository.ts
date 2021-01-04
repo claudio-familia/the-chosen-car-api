@@ -23,8 +23,8 @@ export class BrandRepostory {
     }
     
     public async add(entity: BrandDto): Promise<Brand> {
-        const newEntity = await new this.brandModel(entity);
-        return newEntity.save();
+        const newEntity = new this.brandModel(entity);
+        return await newEntity.save();
     }
 
     public async update(id: string, entity: BrandDto): Promise<Brand> {

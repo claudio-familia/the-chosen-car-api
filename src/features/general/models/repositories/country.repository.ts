@@ -23,8 +23,8 @@ export class CountryRepostory {
     }
     
     public async add(entity: CountryDto): Promise<Country> {
-        const newEntity = await new this.countryModel(entity);
-        return newEntity.save();
+        const newEntity = new this.countryModel(entity);
+        return await newEntity.save();
     }
 
     public async update(id: string, entity: CountryDto): Promise<Country> {
