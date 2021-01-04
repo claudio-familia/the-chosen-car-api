@@ -3,7 +3,7 @@ import { PaginationQueryDto } from 'src/shared/models/dto/pagination-query.dto';
 import { CarTypeDto } from '../models/dtos/cartype.dto';
 import { ICarType } from '../models/interfaces/cartype.interface';
 import { CarTypeRepostory } from '../models/repositories/cartype.repository';
-import { CarType } from '../models/schemas/cartype.entity';
+import { CarType } from '../models/schemas/cartype.schema';
 
 @Injectable()
 export class CartypeService {

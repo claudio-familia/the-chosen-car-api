@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
 import { CarTypeDto } from '../models/dtos/cartype.dto';
 import { ICarType } from '../models/interfaces/cartype.interface';
-import { CarType } from '../models/schemas/cartype.entity';
+import { CarType } from '../models/schemas/cartype.schema';
 import { CartypeService } from '../services/cartype.service';
 
 @Controller('cartype')
