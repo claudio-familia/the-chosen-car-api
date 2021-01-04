@@ -1,5 +1,5 @@
 import { Brand, BrandSchema } from "src/features/car/models/schemas/brand.schema";
-import { CarType, CarTypeSchema } from "src/features/car/models/schemas/cartype.schema";
+import { CarType, CarTypeSchema } from "src/features/car/models/schemas/car-type.schema";
 import { Country, CountrySchema } from "src/features/general/models/schemas/country.schema";
 import { State, StateSchema } from "src/features/general/models/schemas/state.schema";
 

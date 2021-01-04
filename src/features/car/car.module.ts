@@ -4,7 +4,7 @@ import { CARREPOSITORIES, REPOSITORIES } from 'src/shared/models/repositories/re
 import { CARSCHEMAS, SCHEMAS } from 'src/shared/models/schemas/schemas';
 import { CARSERVICES, SERVICES } from 'src/shared/services/services';
 import { BrandController } from './controllers/brand.controller';
-import { CarTypeController } from './controllers/cartype.controller';
+import { CarTypeController } from './controllers/car-type.controller';
 
 @Module({
   imports: [
