@@ -12,5 +12,5 @@ export class BrandDto {
     description: string;
     
     @IsNotEmpty()
-    country: Country;
+    country: string;
 }
