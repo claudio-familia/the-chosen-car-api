@@ -8,7 +8,7 @@ namespace TheChosenCarAPI.DataAccess.Configuration
 {
     public static partial class RepositoriesConfiguration
     {
-        public static void AddRespositories(this IServiceCollection services, IConfiguration configuration)
+        public static void AddRepositories(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<TheChosenCarDBContext>(m =>
             {
