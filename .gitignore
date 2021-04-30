@@ -2,4 +2,14 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/TheChosenCarAPI.BusinessLogic/obj/Debug/netcoreapp3.1
+/TheChosenCarAPI/.vs/
+/TheChosenCarAPI/obj
+/TheChosenCarAPI/bin
+/TheChosenCarAPI.BusinessLogic/obj
+/TheChosenCarAPI.BusinessLogic/bin
+/TheChosenCarAPI.Common/obj
+/TheChosenCarAPI.Common/bin
+/TheChosenCarAPI.DataAccess/obj
+/TheChosenCarAPI.DataAccess/bin
+/TheChosenCarAPI.Domain/obj
+/TheChosenCarAPI.Domain/bin
