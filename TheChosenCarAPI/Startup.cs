@@ -30,11 +30,11 @@ namespace TheChosenCarAPI
         {
             services.AddHttpContextAccessor();
 
-            services.AddCommonServices();
+            services.AddCommonServices(Configuration);
 
             services.AddRepositories(Configuration);
 
-            services.AddServices();            
+            services.AddServices();
 
             services.AddControllers();
         }
@@ -50,6 +50,8 @@ namespace TheChosenCarAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
